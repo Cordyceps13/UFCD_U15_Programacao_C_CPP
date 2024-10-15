@@ -19,10 +19,10 @@ int main(int argc, char* argv[]) {
 
     // Print header
     cout << left << setw(160) << "\nNome do ficheiro" << "Tamanho em Bytes" << endl;
-    cout << string(80, '-') << endl;
+    cout << string(180, '-') << endl;
 
     try {
-        for (const auto& entry : fs::recursive_directory_iterator(".")) {
+        for (const auto& entry : fs::directory_iterator(".")) {
             if (entry.is_regular_file() && entry.path().extension() == file_extension) {
                 // Get the full path of the file
                 const auto& path = entry.path();
