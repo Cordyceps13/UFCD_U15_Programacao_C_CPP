@@ -17,8 +17,8 @@ int main(int argc, char* argv[]) {
         file_extension = "." + file_extension;
     }
 
-        // Print header
-    cout << left << setw(60) << "\nFile Name" << "Size (bytes)" << endl;
+    // Print header
+    cout << left << setw(60) << "\nNome do ficheiro" << "Tamanho em Bytes" << endl;
     cout << string(80, '-') << endl;
 
     try {
