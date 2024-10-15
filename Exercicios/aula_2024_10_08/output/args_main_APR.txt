@@ -1,0 +1,9 @@
+O nome do programa é: D:\Curso_Programacao\UFCDs\U15_0810_Programacao_em_C_CPP_avancada\Trabalhos\Progs\output\args_main_APR.exe
+Número de argumentos passados: 6
+----De seguida constam os argumentos passados por linha de comandos----
+Argumento nº 0: D:\Curso_Programacao\UFCDs\U15_0810_Programacao_em_C_CPP_avancada\Trabalhos\Progs\output\args_main_APR.exe
+Argumento nº 1: UFCD_U15
+Argumento nº 2: Programacao em C++
+Argumento nº 3: Avancada
+Argumento nº 4: Andre Proenca
+Argumento nº 5: 2024-10-08
