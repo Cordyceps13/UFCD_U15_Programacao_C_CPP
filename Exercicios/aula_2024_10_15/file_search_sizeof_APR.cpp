@@ -17,6 +17,10 @@ int main(int argc, char* argv[]) {
         file_extension = "." + file_extension;
     }
 
+        // Print header
+    cout << left << setw(60) << "\nFile Name" << "Size (bytes)" << endl;
+    cout << string(80, '-') << endl;
+
     try {
         for (const auto& entry : fs::recursive_directory_iterator(".")) {
             if (entry.is_regular_file() && entry.path().extension() == file_extension) {
@@ -27,9 +31,10 @@ int main(int argc, char* argv[]) {
                 uintmax_t file_size = fs::file_size(path);
                 
                 // Print the file path and size
-                cout << path.string() << " (" << file_size << " bytes)" << endl;
+                cout << left << setw(60) <<  path.string() << file_size << endl;
             }
         }
+        cout << "\n";
     } catch (const fs::filesystem_error& e) {
         cerr << "Error: " << e.what() << endl;
         return 1;
