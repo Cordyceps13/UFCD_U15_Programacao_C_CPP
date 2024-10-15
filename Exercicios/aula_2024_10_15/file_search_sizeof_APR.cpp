@@ -20,7 +20,14 @@ int main(int argc, char* argv[]) {
     try {
         for (const auto& entry : fs::recursive_directory_iterator(".")) {
             if (entry.is_regular_file() && entry.path().extension() == file_extension) {
-                cout << entry.path().string() << endl;
+                // Get the full path of the file
+                const auto& path = entry.path();
+                
+                // Get the file size in bytes
+                uintmax_t file_size = fs::file_size(path);
+                
+                // Print the file path and size
+                cout << path.string() << " (" << file_size << " bytes)" << endl;
             }
         }
     } catch (const fs::filesystem_error& e) {
