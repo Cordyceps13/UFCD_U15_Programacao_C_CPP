@@ -1,0 +1,4 @@
+##Exemplo2
+Mostra o valor atual da vari├ível 'var_ex02': 20
+Mostra o endere├ºo de mem├│ria onde se encontra a vari├ível 'var_ex02': 0x76dedff670
+Mostra o valor da vari├ível 'var_ex02', apontada pelo ponteiro 'ptr_ex02': 20

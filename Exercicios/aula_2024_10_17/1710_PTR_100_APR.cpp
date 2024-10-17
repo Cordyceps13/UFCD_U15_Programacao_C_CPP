@@ -1,4 +1,6 @@
 #include <iostream>
+#include <fstream>
+#include <string>
 
 void meuCarimbo(void);
 void mudaLinha(void);
@@ -24,25 +26,25 @@ void separador(void);
  * As variáveis do tipo ponteiro 'apontam' para o próximo elemento de uma lista. 
  */
 int main() {
-    
+        
     meuCarimbo();
     mudaLinha();
     separador();
-
-    
+    mudaLinha();
     /** 
     * O operador '&' é unário e significa 'endereço de...'. Por exemplo, &codPostal quer dizer 'endereço da variável codPostal'.
     * O código abaixo ilustra um exemplo para uma variável do tipo inteiro.
     * Nota: se executarmos o código várias vezes verificamos que o endereço de memória é diferente em cada execução.
     * [Exemplo 01] 
     */
-        std::cout << "--- Exemplo 01 --->" << std::endl;
+        std::cout << "--- ##Exemplo 01 --->" << std::endl;
         int numero = 10;
         std::cout << numero  << std::endl;
         std::cout << &numero << std::endl;
         
     mudaLinha();
     separador();
+    mudaLinha();
 
 /**
  * Vamos considerar que dispomos de um tipo de dados para representar endereços.
@@ -58,7 +60,7 @@ int main() {
     /** 
     * [Exemplo 02]
     */ 
-        std::cout << "--- Exemplo 02 --->" << std::endl;
+        std::cout << "--- ##Exemplo 02 --->" << std::endl;
         int var_ex02 = 20;
         int *ptr_ex02;
         ptr_ex02 = &var_ex02; 
@@ -68,11 +70,12 @@ int main() {
         
     mudaLinha();
     separador();
+    mudaLinha();
 
     /** 
     * [Exemplo 03]
     */ 
-        std::cout << "--- Exemplo 03 --->" << std::endl;
+        std::cout << "--- ##Exemplo 03 --->" << std::endl;
         char letra_ex03 = '-';		
         char *ptr_ex03;
         ptr_ex03 = &letra_ex03;
@@ -86,6 +89,7 @@ int main() {
         
     mudaLinha();
     separador();
+    mudaLinha();
         
 /**
  * Existem alguns erros muito comuns quando se usam ponteiros:
@@ -98,18 +102,19 @@ int main() {
     /** 
     * [Exemplo 04]
     */ 
-        std::cout << "--- Exemplo 04 --->" << std::endl;
-        //int k, *p;
-		//*p = 10;
-        // std::cout << *p  << std::endl; // Atenção ao erro de 'execução' (runtime).
+        std::cout << "--- ##Exemplo 04 --->" << std::endl;
+        int k, *p;
+		*p = 10;
+         std::cout << *p  << std::endl; // Atenção ao erro de 'execução' (runtime).
         
     mudaLinha();
     separador();
+    mudaLinha();
 
     /** 
     * [Exemplo 05]
     */ 
-        std::cout << "--- Exemplo 05 --->" << std::endl;
+        std::cout << "--- ##Exemplo 05 --->" << std::endl;
         int numeros[5] = {10, 20, 30, 40, 50}; // Definir e inicializar um 'array' de números inteiros.
         for (int i = 0; i < 5; ++i) {
             std::cout << numeros[i] << " ";
@@ -123,6 +128,7 @@ int main() {
         
     mudaLinha();
     separador();
+    mudaLinha();
       
     /**
      * Aritmética com ponteiros.
@@ -142,6 +148,7 @@ int main() {
         
     mudaLinha();
     separador();
+    mudaLinha();
         
         ptr--; // Descrementar o ponteiro para recuar uma posição de memória (neste caso, dentro do 'array').
         std::cout << "Novo endereço de memória, para onde o ponteiro aponta': " << ptr << std::endl;
@@ -152,6 +159,7 @@ int main() {
         
     mudaLinha();
     separador();
+    mudaLinha();
 
     /** Valores inteiros podem ser adicionados ou subtraídos aos ponteiros e actuam como incremento ou decremento,
      *  respectivamente, mas por um 'número' específico, ao contrário do que sucede nas operações aritméticas.
@@ -162,6 +170,7 @@ int main() {
         
     mudaLinha();
     separador();
+    mudaLinha();
 
     /** Para finalizar esta introdução aos ponteiros, devemos sempre ter em atenção as operações de incremento e/ou
      *  decremento que efetuamos. 
@@ -197,7 +206,6 @@ return 0; } // Bug free
 
 
 //Funções
-
 void meuCarimbo(void)
 {
     time_t tempo_atual = time(NULL);

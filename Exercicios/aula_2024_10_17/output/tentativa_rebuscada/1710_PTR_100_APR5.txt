@@ -1,0 +1,20 @@
+##Exemplo5
+10 20 30 40 50 
+Endere├ºo de mem├│ria onde est├í o primeiro elemento do 'array': 0x76dedff650
+Valor do primeiro elemento do 'array', usando o ├¡ndice (index): 10
+Valor do primeiro elemento do 'array', usando o endere├ºo (pointer): 10
+************************************************************************************************************************
+Novo endere├ºo de mem├│ria, para onde o ponteiro aponta': 0x76dedff654
+Valor do elemento do 'array', apontado pelo novo endere├ºo:  20
+Novo endere├ºo de mem├│ria, para onde o ponteiro aponta': 0x76dedff658
+Valor do elemento do 'array', apontado pelo novo endere├ºo: 30
+************************************************************************************************************************
+Novo endere├ºo de mem├│ria, para onde o ponteiro aponta': 0x76dedff654
+Valor do elemento do 'array', apontado pelo novo endere├ºo: 20
+Valor do elemento do 'array', apontado pelo endere├ºo atual: 40
+************************************************************************************************************************
+Valor do elemento do 'array', apontado pelo endere├ºo atual: 50
+************************************************************************************************************************
+[UFCD_U15] - [Ponteiros] - [Andre Proenca] - [ 17-10-2024 11:50:07 ]
+
+************************************************************************************************************************
