@@ -67,7 +67,7 @@ void separador(void) {
 }
 
 void exibirTexto(int opcao_txt) {
-    std::ifstream ficheiro("1710_PTR_100_APR2.txt");
+    std::ifstream ficheiro("1710_PTR_100_APR.txt");
     std::string linha;
     std::string secaoProcurada = "##Exemplo" + std::to_string(opcao_txt);
     bool mostrarConteudo = false;

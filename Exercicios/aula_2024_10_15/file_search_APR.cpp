@@ -1,7 +1,6 @@
 #include <iostream>
 #include <filesystem>
 #include <string>
-//André Proença
 
 using namespace std;
 namespace fs = filesystem;

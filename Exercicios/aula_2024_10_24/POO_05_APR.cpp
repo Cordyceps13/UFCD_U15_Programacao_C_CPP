@@ -1,11 +1,8 @@
 #include <iostream>
 #include <string>
+#include "template.h"
 
 using namespace std;
-
-void meuCarimbo(void);
-void mudaLinha(void);
-void separador(void);
 
 class Pessoa{
 
@@ -23,31 +20,30 @@ class Pessoa{
         }
 
         void podeFrequentar(void){
-            if(classificacao > 12 && idade >= 20){
+            if(classificacao > 12 && idade >= 20){      
+            mudaLinha();  
                 cout << "Pode inscrever-se";
             }
-            else{
+            else{      
+            mudaLinha();  
                 cout << "Nao se pode inscrever";
             }
         }
 
-        void get(){
+        void get(){      
+            mudaLinha();  
             cout << "Nome da pessoa: " << nome;          
-            mudaLinha();  
+            mudaLinha();   
             cout << "Idade: " << idade;
-            mudaLinha();  
+            mudaLinha();   
             cout << "Classificacao: " << classificacao;
             mudaLinha();  
         }
 };
 
 int main(){
-    separador();
-    mudaLinha();
-    meuCarimbo();
-    mudaLinha();
-    separador();
-    mudaLinha();
+
+    header();
 
     string nome;
     int idade;
@@ -64,7 +60,7 @@ int main(){
     mudaLinha();
 
     cout << "Classificacao: ";
-    cin >> cassificacao;
+    cin >> classificacao;
 
     pessoa.set(nome, idade, classificacao);
     mudaLinha();
@@ -75,39 +71,7 @@ int main(){
 
     pessoa.podeFrequentar();
     mudaLinha();
-    mudaLinha();
-    separador();
-    mudaLinha();
-    
-    meuCarimbo();
-    mudaLinha();
-    separador();
-    mudaLinha();
+    footer();
     
     return 0;
-}
-
-
-void meuCarimbo(void)
-{
-    time_t tempo_atual = time(NULL);
-    struct tm *tempo_local = localtime(&tempo_atual);
-    char data_hora[64];
-    
-    strftime(data_hora, sizeof(data_hora), "%d-%m-%Y %H:%M:%S", tempo_local);
-    printf("\n[UFCD_U15] - [POO] - [Andre Proenca] - [ %s ]", data_hora);
-    mudaLinha();
-}
-
-
-void mudaLinha(void)
-{
-    printf("\n");
-}	
-
-void separador(void)
-{
-    for (int i = 0; i < 120; i++){
-        printf("*");
-    }
 }

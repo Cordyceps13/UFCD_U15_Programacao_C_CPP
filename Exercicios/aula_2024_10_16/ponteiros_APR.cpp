@@ -4,8 +4,7 @@ using namespace std;
 
 void meuCarimbo(void);
 void mudaLinha(void);
-void separador(void)
-;
+void separador(void);
  
 int main() {
     
